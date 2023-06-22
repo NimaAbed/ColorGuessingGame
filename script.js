@@ -46,4 +46,24 @@ function randomNumber() {
     return Math.round(Math.random() * 255)
 }
 
+function btnHandler(e) {
+    if(endGame){
+        return
+    }
+    if (e.target.style.backgroundColor == randomCont.style.backgroundColor) {
+        console.log(e.target)
+        // console.log(e.target)
+        // console.log("you Win")
+        getMessage.innerHTML="correct"
+        getH1.style.backgroundColor=randomCont.style.backgroundColor
+        reset.innerHTML="Play Again ?"
+        endGame=true
+    }else{
+        console.log("You Wrong")
+        getMessage.innerHTML = "Try Again"
+        e.target.classList.add('hidden')
+        console.log(e.target)
+    }
+}
+
 selectRandomColor()
