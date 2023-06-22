@@ -30,7 +30,17 @@ function selectRandomColor() {
         // console.log(item.id)
     })
 }
-
+function ryLoad(){
+    selectRandomColor()
+    getH1.style.backgroundColor="#2C8E99"
+    container.forEach(item=>{
+        item.classList.remove('hidden')
+    })
+    // container.classList.remove('hidden')
+    getMessage.innerHTML=""
+    reset.innerHTML="New Color"
+    endGame=false
+}
 
 
 selectRandomColor()
