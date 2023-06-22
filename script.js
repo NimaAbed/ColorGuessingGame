@@ -42,5 +42,8 @@ function ryLoad(){
     endGame=false
 }
 
+function randomNumber() {
+    return Math.round(Math.random() * 255)
+}
 
 selectRandomColor()
